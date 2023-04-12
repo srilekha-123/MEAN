@@ -1,0 +1,14 @@
+exports.myDateTime=function(){
+return Date()
+}
+
+
+
+
+var http=require('http');
+var dt=require('./myfirstmodule');
+http.createServer(function(req,res){
+res.writeHead(200,{'content-type':'text/html'});
+res.write("<p style='font-size:25px;font-weight:bold;color:blue'>Current Date and Time:<br><b style='color:red;'>"+dt.myDateTime()+"</b>");
+res.write("<br><b style='color:green;'>URL pattern:"+req.url+"</b></p>");
+res.end();}).listen(8080);
