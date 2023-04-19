@@ -1,0 +1,21 @@
+const promt=require('prompt-sync')({sigint:true});
+var num=Number(promt('enter number'));
+let t=num;
+let sum=0;
+while(num) {
+i=1;  
+fact=1;  
+    rem=num%10;  
+    while(i<=rem){  
+        fact=fact*i;    
+        i=i+1; 
+        }
+    sum=sum+fact;  
+    num=Math.floor(num/10);  
+}
+if(sum==t){
+console.log(t +' is strong');
+}
+else{
+console.log(t+' is not strong');
+}
