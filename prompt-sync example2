@@ -1,0 +1,8 @@
+const prompt=require('prompt-sync')();
+const name=prompt("what is your name?");
+console.log(`Hey I am ${name}`);
+
+
+C:\stackmean>node name.js
+what is your name?Sri
+Hey I am Sri
